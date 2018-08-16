@@ -11,4 +11,6 @@ unzip '*.zip' -d /usr/local/bin/ && \
 rm -f '*.zip' && \
 apk -v --purge del py-pip && \
 rm /var/cache/apk/* && \
-chmod +x /usr/local/bin/*
+chmod +x /usr/local/bin/* && \
+adduser -D -u 1000 builder
+USER builder
