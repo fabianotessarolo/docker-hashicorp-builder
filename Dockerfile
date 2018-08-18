@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk update && \
 apk upgrade && \
-apk add wget git unzip python py-pip ansible && \
+apk add wget git unzip python py-pip && \
 pip install awscli==1.15.81 && \
 pip install ansible==2.6.3 && \
 wget https://releases.hashicorp.com/packer/1.2.5/packer_1.2.5_linux_amd64.zip && \
