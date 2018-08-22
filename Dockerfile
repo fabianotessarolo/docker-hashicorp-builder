@@ -22,7 +22,7 @@ RUN apk add --no-cache \
 	wget https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip && \
 	wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.16.4/terragrunt_linux_amd64 -O /usr/local/bin/terragrunt && \
 	unzip '*.zip' -d /usr/local/bin/ && \ 
-	rm -f '*.zip' && \
+	rm -f *.zip && \
 	chmod +x /usr/local/bin/* && \
 	adduser -D -u 1000 builder
 
