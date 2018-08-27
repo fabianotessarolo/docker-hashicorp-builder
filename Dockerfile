@@ -10,8 +10,8 @@ RUN apk update --no-cache && apk upgrade --no-cache && \
 	build-base \
 	musl-dev \
 	py-pip && \
-	pip install --no-cache-dir --upgrade pip==18.0 awscli==1.15.81 ansible==2.6.3 python-consul==1.1.0 && \
-	apk del .build-deps
+  pip install --no-cache-dir --upgrade pip==18.0 awscli==1.15.81 ansible==2.6.3 python-consul==1.1.0 boto==2.49.0 botocore==1.11.1 boto3==1.8.1 && \
+  apk del .build-deps
 
 RUN apk add --no-cache \
 	wget \
